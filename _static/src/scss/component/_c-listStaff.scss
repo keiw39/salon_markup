@@ -1,0 +1,84 @@
+/* listStaff
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.c-listStaff__wrap {
+  margin-top: 30px;
+  @include res.responsive(lg) {
+    margin-top: 60px;
+  }
+}
+
+.c-listStaff__item {
+  float: left;
+  width: 50%;
+  padding-bottom: 30px;
+  @include res.responsive(lg) {
+    width: calc(100% / 3);
+    padding-bottom: 60px;
+  }
+}
+
+.c-listStaff__itemInner {
+  figcaption {
+    padding-top: 20px;
+    @include res.responsive(lg) {
+      padding-top: 35px;
+    }
+  }
+}
+
+.c-listStaff__thumbWrap {
+  position: relative;
+}
+
+.c-listStaff__img {
+  width: 100%;
+}
+
+.c-listStaff__popupToggle {
+  position: absolute;
+  right: 6%;
+  bottom: 4%;
+  @include res.responsive(lg) {
+    right: 18px;
+    bottom: 18px;
+  }
+}
+
+.c-listStaff__popupToggle__img {
+  width: 17px;
+  height: 17px;
+  @include res.responsive(lg) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.c-listStaff__jobs {
+  display: block;
+  width: 100%;
+  font-family: set.$font-family-english;
+  font-size: 6px;
+  line-height: 1.2;
+  color: #fff;
+  text-align: left;
+  transform: scale(0.6);
+  transform-origin: 0 0;
+  @include res.responsive(lg) {
+    font-size: 12px;
+    transform: scale(1);
+  }
+}
+
+.c-listStaff__name {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.125;
+  color: #fff;
+  @include res.responsive(lg) {
+    padding-top: 10px;
+    font-size: 28px;
+  }
+}

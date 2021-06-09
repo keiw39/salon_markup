@@ -1,0 +1,61 @@
+/* spMenu
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+.l-spMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 100vw;
+  height: calc(100vh - 75px);
+  margin-top: 75px;
+  background-color: #fff;
+  background-color: set.$color-accent;
+  transition: opacity 0.3s linear;
+
+  .l-container {
+    padding-top: 134px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  &.is-active {
+    display: block;
+    animation-name: fade-in;
+    animation-duration: 0.7s;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.l-spMenu__navItem {
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+  &.-phone {
+    color: #fff;
+    i {
+      margin-right: 6px;
+      font-size: 20px;
+      color: #fff;
+    }
+    span {
+      font-family: set.$font-family-english;
+      font-size: 16px;
+    }
+  }
+}
+
+.l-spMenu__navLink {
+  font-family: set.$font-family-english;
+  font-size: 29px;
+  color: #fff;
+  text-decoration: none;
+}

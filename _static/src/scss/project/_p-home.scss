@@ -1,0 +1,202 @@
+/* home-mv
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__mv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  margin-top: 40px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  @include res.responsive(md) {
+    margin-top: 0;
+  }
+  @include res.responsive(lg) {
+    min-height: 700px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .l-container {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.p-home__mv__imgWrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.p-home__mv__img {
+  width: 100%;
+}
+
+.p-home__mv__textWrap {
+  padding-top: 115px;
+  text-align: center;
+  @include res.responsive(lg) {
+    padding-top: rem.rem(168);
+  }
+}
+
+.p-home__mv__catchTitle {
+  font-family: set.$font-family-english;
+  font-size: 40px;
+  line-height: 1.15;
+  @include res.responsive(lg) {
+    font-size: 66px;
+    line-height: 1;
+  }
+}
+
+.p-home__mv__subTitle {
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 2.46;
+  letter-spacing: 0.07em;
+  @include res.responsive(lg) {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+}
+
+/* home-sec-concept
+----------------------------------------- */
+.p-home__sec-concept {
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 140px;
+  @include res.responsive(lg) {
+    padding-top: 205px;
+  }
+}
+
+/* home-sec-infomation
+----------------------------------------- */
+.p-home__sec-info {
+  position: relative;
+  padding-top: 18px;
+  .l-container {
+    max-width: 1200px;
+    padding-right: 0;
+  }
+  &::before {
+    position: absolute;
+    top: 52px;
+    left: -185px;
+    font-family: set.$font-family-english;
+    font-size: 120px;
+    content: 'NiNe.';
+    opacity: 0.2;
+    transform: rotateZ(270deg);
+    @include res.responsive(lg) {
+      top: 155px;
+      left: -555px;
+      font-size: 370px;
+    }
+  }
+  @include res.responsive(lg) {
+    padding-top: 0px;
+    padding-bottom: 200px;
+  }
+}
+
+/* home-sec-staff
+----------------------------------------- */
+.p-home__sec-staff {
+  padding-top: 105px;
+  padding-bottom: 80px;
+  overflow: hidden;
+  background-color: set.$color-accent;
+  .l-section__title {
+    color: #fff;
+  }
+  @include res.responsive(lg) {
+    padding-top: 195px;
+    padding-bottom: 134px;
+  }
+}
+
+/* home-sec-menu
+----------------------------------------- */
+.p-home__sec-menu {
+  padding-top: 90px;
+  padding-bottom: 70px;
+  @include res.responsive(lg) {
+    padding-top: 195px;
+    padding-bottom: 165px;
+  }
+}
+
+/* home-sec-access
+----------------------------------------- */
+.p-home__sec-access {
+  &.l-section {
+    padding-bottom: 86px;
+    @include res.responsive(lg) {
+      padding-bottom: 180px;
+    }
+  }
+}
+
+.p-home__sec-access__mapWrap {
+  position: relative;
+  height: 0;
+  padding-bottom: 48.5%;
+  margin-bottom: 100px;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  object {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  embed {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  @include res.responsive(lg) {
+    padding-bottom: 36.5%;
+    margin-bottom: 58px;
+  }
+}
+
+/* home-sec-instagram
+----------------------------------------- */
+.p-home__sec-instagram {
+  padding-bottom: 245px;
+  overflow: hidden;
+  .l-section__title {
+    text-align: center;
+  }
+  .l-container {
+    @include res.responsive(lg) {
+      max-width: 1280px;
+    }
+  }
+  @include res.responsive(lg) {
+    padding-bottom: 300px;
+  }
+}

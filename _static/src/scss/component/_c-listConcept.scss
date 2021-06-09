@@ -1,0 +1,56 @@
+/* listConcept
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.c-listConcept__wrap {
+  margin-top: 25px;
+  @include res.responsive(lg) {
+    display: flex;
+    margin-top: 60px;
+  }
+  .l-section__text {
+    @include res.responsive(lg) {
+      width: 60%;
+    }
+  }
+}
+
+.c-listConcept__btnWrap {
+  position: absolute;
+  right: 14px;
+  bottom: -50px;
+  @include res.responsive(lg) {
+    right: 34px;
+    bottom: -4px;
+  }
+}
+
+.c-listConcept__btn {
+  position: relative;
+  display: inline-block;
+  padding: 0 25px;
+  padding-bottom: 8px;
+  font-family: set.$font-family-english;
+  font-size: 14px;
+  line-height: 2;
+  text-decoration: none;
+  &::before {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background: set.$color-accent;
+    transition: 0.4s;
+    transform: scale(0, 1);
+    transform-origin: left;
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+  @include res.responsive(lg) {
+    font-size: 16px;
+  }
+}

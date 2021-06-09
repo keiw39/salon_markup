@@ -1,0 +1,26 @@
+/* section
+----------------------------------------- */
+@use "../function/rem";
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.l-section {
+  padding-bottom: 100px;
+}
+
+.l-section__title {
+  font-family: set.$font-family-english;
+  font-size: 25px;
+  line-height: 1.12;
+  letter-spacing: 0.05em;
+  @include res.responsive(lg) {
+    font-size: 32px;
+  }
+}
+
+.l-section__text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.5;
+  letter-spacing: 0;
+}

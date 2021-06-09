@@ -1,0 +1,19 @@
+/* z-index
+----------------------------------------- */
+//必要になる要素の洗い出し
+$elementes: (is-active, c-modal);
+
+//index関数で呼び出し
+@function z-index($name) {
+  @return index($elementes, $name);
+}
+
+//呼び出し
+
+.is-active {
+  z-index: z-index(is-active); //1
+}
+
+.c-modal {
+  z-index: z-index(c-modal); //2
+}

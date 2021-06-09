@@ -1,0 +1,16 @@
+/* hedden(非表示)
+----------------------------------------- */
+@use "../function/responsive" as res;
+.u-hidden-sm {
+  display: block;
+  @include res.responsive(sm) {
+    display: none;
+  }
+}
+
+.u-hidden-sp {
+  display: none;
+  @include res.responsive(sm) {
+    display: block;
+  }
+}

@@ -1,0 +1,79 @@
+/* listMenu
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.c-listMenu__wrap {
+  padding-top: 56px;
+  @include res.responsive(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 48px;
+  }
+}
+
+.c-listMenu__title {
+  position: relative;
+  margin-bottom: 40px;
+  font-family: set.$font-family-english;
+  font-size: 18px;
+  line-height: 1.55;
+  background-color: #fff;
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    width: 70%;
+    height: 1px;
+    content: '';
+    background-color: set.$color-accent;
+    @include res.responsive(lg) {
+      width: 70%;
+    }
+  }
+  @include res.responsive(lg) {
+    font-size: 21px;
+  }
+}
+
+.c-listMenu__item {
+  &:nth-of-type(1) {
+    @include res.responsive(lg) {
+      margin-bottom: 48px;
+    }
+  }
+  &:nth-of-type(2) {
+    @include res.responsive(lg) {
+      margin-bottom: 48px;
+    }
+  }
+  &:nth-of-type(odd) {
+    @include res.responsive(lg) {
+      margin-right: 10%;
+    }
+  }
+  &:not(:nth-of-type(1)) {
+    margin-top: 18.5px;
+    @include res.responsive(lg) {
+      margin-top: 0;
+    }
+  }
+  @include res.responsive(lg) {
+    width: 45%;
+  }
+}
+
+.c-listMenu__detail {
+  padding-bottom: 30px;
+}
+
+.c-listMenu__menu {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.c-listMenu__price {
+  font-family: set.$font-family-english;
+  font-size: 14px;
+  text-align: end;
+}

@@ -1,0 +1,139 @@
+/* footer
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.l-footer {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 60px;
+  color: #fff;
+  background-color: set.$color-accent;
+  @include res.responsive(lg) {
+    padding-top: 140px;
+    padding-bottom: 150px;
+  }
+}
+
+.l-footer__inner {
+  &.l-container {
+    @include res.responsive(lg) {
+      max-width: 1280px;
+    }
+  }
+  @include res.responsive(lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.l-footer__itemWrap {
+  &:nth-of-type(2) {
+    margin-top: 28px;
+    @include res.responsive(lg) {
+      margin-top: 34px;
+    }
+    text-align: end;
+  }
+}
+
+.l-footer__socialTitle {
+  font-family: set.$font-family-english;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+}
+
+.l-footer__socialWrap {
+  margin-top: 14px;
+}
+
+.l-footer__socialLink {
+  display: inline-flex;
+  margin-right: 45px;
+  text-decoration: none;
+
+  i {
+    font-size: 32px;
+    transition: 0.3s;
+  }
+  &:hover {
+    i {
+      opacity: 0.5;
+    }
+  }
+}
+
+.l-footer__navWrap {
+  margin-top: 28px;
+  @include res.responsive(lg) {
+    margin-top: 52px;
+  }
+}
+
+.l-footer__navList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.l-footer__navItem {
+  margin-right: 30px;
+  line-height: 1.6;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  @include res.responsive(lg) {
+    margin-right: 28px;
+  }
+}
+
+.l-footer__navLink {
+  position: relative;
+  display: inline-block;
+  font-family: set.$font-family-english;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: 0.3s;
+  &::after {
+    position: absolute;
+    bottom: 0.3em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &:hover::after {
+    bottom: -5px;
+    opacity: 1;
+  }
+  @include res.responsive(lg) {
+    font-size: 14px;
+  }
+}
+
+.l-footer__company {
+  display: inline-block;
+  font-family: set.$font-family-english;
+  font-size: 36px;
+  text-align: end;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.l-footer__copy {
+  display: block;
+  font-family: set.$font-family-english;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: right;
+  letter-spacing: 0;
+  @include res.responsive(lg) {
+    margin-top: 42px;
+  }
+}

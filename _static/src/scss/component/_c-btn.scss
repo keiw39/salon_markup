@@ -1,0 +1,26 @@
+/* btn
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.c-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  color: #ffffff;
+  text-align: center;
+  background-color: set.$color-accent;
+  border-radius: 5px;
+  @include res.responsive(md) {
+    width: 246px;
+    height: 60px;
+    font-size: 20px;
+  }
+  &:hover {
+    background-color: set.$color-linkhover;
+    transition: 0.5s;
+  }
+}

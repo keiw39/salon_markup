@@ -1,0 +1,52 @@
+/* listAccess
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.c-listAccess__wrap {
+  margin-top: 30px;
+  @include res.responsive(lg) {
+    margin-top: 24px;
+  }
+}
+
+.c-listAccess__detailInner {
+  @include res.responsive(lg) {
+    display: flex;
+  }
+}
+
+.c-listAccess__detailTable {
+  border: none;
+  @include res.responsive(lg) {
+    width: 50%;
+  }
+}
+
+.c-listAccess__detailTh {
+  width: 25%;
+  padding: 12px 0px;
+  font-family: set.$font-family-english;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: left;
+  @include res.responsive(lg) {
+    width: 22%;
+    font-size: 11px;
+  }
+}
+
+.c-listAccess__detailTd {
+  padding: 10px 0px;
+  padding-left: 12px;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: 0;
+  a {
+    text-decoration: none;
+    @include res.responsive(lg) {
+      pointer-events: none;
+    }
+  }
+}

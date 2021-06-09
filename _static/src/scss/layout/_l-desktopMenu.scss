@@ -1,0 +1,80 @@
+/* desktopMenu
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.l-desktopMenu__nav {
+  display: none;
+  @include res.responsive(md) {
+    display: block;
+    display: flex;
+    align-items: center;
+    // margin-right: 66px;
+  }
+  @include res.md {
+    margin-right: rem.rem(30);
+  }
+  @include res.responsive(lg) {
+    margin-right: rem.rem(66);
+  }
+}
+
+.l-desktopMenu__navList {
+  display: flex;
+}
+
+.l-desktopMenu__navItem {
+  &:not(:last-of-type) {
+    margin-right: 27px;
+    @include res.responsive(lg) {
+      margin-right: rem.rem(24);
+    }
+  }
+  &.-phone {
+    margin-bottom: 10px;
+    color: set.$color-accent;
+    text-align: end;
+    i {
+      margin-right: 6px;
+      font-size: 16px;
+      color: set.$color-accent;
+      @include res.responsive(lg) {
+        font-size: 14px;
+      }
+    }
+    span {
+      font-family: set.$font-family-english;
+      font-size: 16px;
+    }
+    @include res.responsive(lg) {
+      padding-top: 10px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.l-desktopMenu__navLink {
+  position: relative;
+  display: inline-block;
+  font-family: set.$font-family-english;
+  font-size: 16px;
+  color: set.$color-accent;
+  text-decoration: none;
+  transition: 0.3s;
+  &::after {
+    position: absolute;
+    bottom: 0.3em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: set.$color-accent;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &:hover::after {
+    bottom: -5px;
+    opacity: 1;
+  }
+}

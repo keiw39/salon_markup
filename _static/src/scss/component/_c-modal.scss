@@ -1,0 +1,145 @@
+/* modal
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.c-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.c-modal__bg {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.c-modal__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  padding-top: 60px;
+  padding-right: 10%;
+  padding-bottom: 60px;
+  padding-left: 10%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  @include res.responsive(lg) {
+    display: flex;
+    width: 73%;
+    padding: 155px 100px;
+  }
+  @include res.responsive(xl) {
+    width: 1000px;
+  }
+}
+
+.c-modal__item {
+  &:nth-of-type(1) {
+    @include res.responsive(lg) {
+      width: 44%;
+      margin-right: 6%;
+    }
+  }
+  &:nth-of-type(2) {
+    @include res.responsive(lg) {
+      width: 50%;
+    }
+  }
+}
+
+.c-modal__imgWrap {
+  height: 150px;
+  @include res.responsive(md) {
+    height: 420px;
+  }
+}
+
+.c-modal__img {
+  object-fit: cover;
+  height: 100%;
+  @include res.responsive(lg) {
+    width: 100%;
+  }
+}
+
+.c-modal__titleWrap {
+  padding-top: 20px;
+  margin-bottom: 24px;
+  @include res.responsive(lg) {
+    padding-top: 6px;
+    margin-bottom: 40px;
+  }
+}
+
+.c-modal__subTitle {
+  font-family: set.$font-family-english;
+  font-size: 10px;
+  transform: scale(0.6);
+  transform-origin: 0 0;
+  @include res.responsive(lg) {
+    padding-bottom: 10px;
+    font-size: 12px;
+    transform: scale(1);
+  }
+}
+
+.c-modal__title {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.125;
+  @include res.responsive(lg) {
+    font-size: 28px;
+  }
+}
+
+.c-modal__commentTitle {
+  margin-bottom: 4px;
+  font-family: set.$font-family-english;
+  font-size: 12px;
+  font-weight: 300;
+  @include res.responsive(lg) {
+    font-size: 14px;
+  }
+}
+
+.c-modal__commentText {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 2;
+  &:nth-of-type(1) {
+    margin-bottom: 24px;
+    @include res.responsive(lg) {
+      margin-bottom: 32px;
+    }
+  }
+  @include res.responsive(lg) {
+    font-size: 14px;
+    line-height: 2.38;
+  }
+}
+
+.c-modal__popupClose {
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  @include res.responsive(lg) {
+    top: 6.5%;
+    right: 5%;
+  }
+}
+
+.c-modal__popupClose__img {
+  width: 20px;
+  height: 20px;
+  @include res.responsive(lg) {
+    width: 55px;
+    height: 55px;
+  }
+}

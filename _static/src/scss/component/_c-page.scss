@@ -1,0 +1,69 @@
+/* page
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.c-page__top {
+  position: absolute;
+  top: -74px;
+  right: 0;
+  display: inline-block;
+  height: 75px;
+  color: set.$color-accent;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid set.$color-accent;
+  &:hover {
+    &.c-page__top {
+      color: #fff;
+      background-color: set.$color-accent;
+      transition: 0.3s;
+    }
+  }
+  @include res.responsive(lg) {
+    top: -135px;
+    height: 136px;
+  }
+}
+
+.c-page__topWrap {
+  display: inline-flex;
+  width: 75px;
+  height: 75px;
+  padding: 30px 24px;
+
+  i {
+    display: flex;
+    justify-content: center;
+    @include res.responsive(lg) {
+      font-size: 25px;
+    }
+  }
+  @include res.responsive(lg) {
+    width: 136px;
+    height: 136px;
+  }
+}
+
+.c-page__topInner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.c-page__topText {
+  width: 120%;
+  font-family: set.$font-family-english;
+  font-size: 10px;
+  text-align: center;
+  transform: scale(0.8);
+  transform-origin: 0 0;
+  @include res.responsive(lg) {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    transform: scale(1);
+  }
+}
