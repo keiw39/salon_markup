@@ -22,6 +22,17 @@ Gulpを導入することによって下記を全て自動化しています。<
 - ブラウザシンク(ファイル編集後、ブラウザを更新→反映する自動リロードを行う)
 - ベンダープレフィックスの付与
 - 画像の自動圧縮
+### Gulpの起動
+1. gulpfile.jsおよびpackage.jsonがある状態で下記コマンドを打つ
+
+※node_modulesおよびpackage-lock.jsonが生成される
+```
+$ npm i
+```
+2. gulp起動のコマンドを打つ
+```
+$ npx gulp
+```
 
 ## 経緯
 [CODE MENTOR](https://codementor.arutega.jp/)様での課題を基に制作しました。
