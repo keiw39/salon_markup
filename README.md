@@ -23,16 +23,18 @@ Gulpを導入することによって下記を全て自動化しています。<
 - ベンダープレフィックスの付与
 - 画像の自動圧縮
 ### Gulpの起動
-1. gulpfile.jsおよびpackage.jsonがある状態で下記コマンドを打つ
+1. gulpfile.jsおよびpackage.jsonがある状態で下記コマンドを打つ。
 
 ※node_modulesおよびpackage-lock.jsonが生成される
 ```
 $ npm i
 ```
-2. gulp起動のコマンドを打つ
+2. gulp起動の下記コマンドを打つ。
 ```
 $ npx gulp
 ```
+3. gulpfile.jsに記述されたタスクが実行されます。
+
 
 ## 経緯
 [CODE MENTOR](https://codementor.arutega.jp/)様での課題を基に制作しました。
